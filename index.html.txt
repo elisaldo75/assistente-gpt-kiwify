@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Assistente GPT</title>
   <style>
     body {
@@ -49,19 +49,13 @@
       const chat = document.getElementById("chat");
       chat.innerHTML += `<div class="message"><strong>Você:</strong> ${question}</div>`;
 
-      // 🔁 Substitua pela URL da API do seu agente GPT personalizado
-      const response = await fetch("https://SEU-LINK-DO-AGENTE", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json"
-        },
-        body: JSON.stringify({ message: question })
-      });
-
-      const data = await response.json();
-      chat.innerHTML += `<div class="message"><strong>Assistente:</strong> ${data.reply || 'Não consegui entender.'}</div>`;
       input.value = "";
-      chat.scrollTop = chat.scrollHeight;
+
+      // RESPOSTA SIMULADA — substitua aqui com a chamada real da sua API
+      setTimeout(() => {
+        chat.innerHTML += `<div class="message"><strong>Prof. Cyborg:</strong> Resposta simulada à pergunta "${question}"</div>`;
+        chat.scrollTop = chat.scrollHeight;
+      }, 1000);
     }
   </script>
 </body>
