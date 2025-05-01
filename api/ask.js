@@ -12,8 +12,7 @@ export default async function handler(req, res) {
       messages: [
         {
           role: "system",
-          content:
-            "Você é o Prof. Cyborg, um assistente especializado em anatomia e fisiologia. Responda com clareza, didática e segurança.",
+          content: "Você é o Prof. Cyborg, especialista em anatomia e fisiologia. Responda de forma clara, didática e objetiva.",
         },
         {
           role: "user",
