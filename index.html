@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Assistente GPT</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Converse com o Assistente GPT 🤖</title>
   <style>
     body {
       font-family: Arial, sans-serif;
-      background: #f0f0f0;
+      background-color: #f0f0f0;
       padding: 20px;
       max-width: 800px;
       margin: auto;
@@ -27,36 +27,4 @@
     }
     button {
       padding: 10px 20px;
-      font-size: 16px;
-    }
-    .message {
-      margin: 10px 0;
-    }
-  </style>
-</head>
-<body>
-  <h2>Converse com o Assistente GPT 🤖</h2>
-  <div id="chat"></div>
-  <input type="text" id="userInput" placeholder="Digite sua pergunta..." />
-  <button onclick="sendMessage()">Enviar</button>
-
-  <script>
-    async function sendMessage() {
-      const input = document.getElementById("userInput");
-      const question = input.value.trim();
-      if (!question) return;
-
-      const chat = document.getElementById("chat");
-      chat.innerHTML += `<div class="message"><strong>Você:</strong> ${question}</div>`;
-
-      input.value = "";
-
-      // RESPOSTA SIMULADA — substitua aqui com a chamada real da sua API
-      setTimeout(() => {
-        chat.innerHTML += `<div class="message"><strong>Prof. Cyborg:</strong> Resposta simulada à pergunta "${question}"</div>`;
-        chat.scrollTop = chat.scrollHeight;
-      }, 1000);
-    }
-  </script>
-</body>
-</html>
+      font-size: 16px
